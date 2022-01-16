@@ -1,0 +1,72 @@
+.weather-app {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+h1 {
+  color: #1ab3a9;
+  font-size: 70px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+#searchButton {
+  border: 0;
+  color: white;
+  background-color: #1ab3a9;
+  display: inline;
+}
+#searchButton:hover {
+  background-color: transparent;
+  color: grey;
+}
+#weatherDetails {
+  margin-top: 50px;
+}
+
+#largeDetails {
+  position: relative;
+  top: 50px;
+  left: 30px;
+}
+
+#cityGroup {
+  color: #1ab3a9;
+  font-size: 35px;
+}
+#largeTemperature {
+  font-size: 80px;
+  color: grey;
+}
+
+#largeIcon {
+  position: relative;
+  top: -100px;
+}
+
+.smallIcons {
+  size: 16px;
+}
+
+#weekDays {
+  text-align: center;
+}
+
+#smallIcons {
+  text-align: center;
+}
+
+#smallTemp {
+  text-align: center;
+}
+
+#conditions {
+  text-transform: capitalize;
+}
