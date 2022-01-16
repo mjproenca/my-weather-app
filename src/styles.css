@@ -70,3 +70,8 @@ ul {
 #conditions {
   text-transform: capitalize;
 }
+
+#footnoteLink {
+  font-size: small;
+  margin-top: 10px;
+}
