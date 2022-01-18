@@ -48,7 +48,8 @@ ul {
 
 #largeIcon {
   position: relative;
-  top: -100px;
+  left: 20px;
+  bottom: 100px;
 }
 
 .smallIcons {
