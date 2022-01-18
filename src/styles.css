@@ -51,18 +51,19 @@ ul {
   font-size: 35px;
 }
 #largeTemperature {
-  font-size: 80px;
+  font-size: 100px;
   color: grey;
+}
+
+#largeDetails .units {
+  position: relative;
+  top: -54px;
 }
 
 #largeIcon {
   position: relative;
-  left: 20px;
+  left: 90px;
   bottom: 100px;
-}
-
-.smallIcons {
-  size: 16px;
 }
 
 .WeatherForecast {
