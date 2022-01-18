@@ -57,7 +57,7 @@ ul {
   size: 16px;
 }
 
-#weekDays {
+.WeatherForecast {
   text-align: center;
 }
 
