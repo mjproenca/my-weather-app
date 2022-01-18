@@ -2,12 +2,15 @@
   border: 1px solid lightgrey;
   border-radius: 10px;
   padding: 20px;
-  max-width: fit-content;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 h1 {
   color: #1ab3a9;
   font-size: 70px;
+  font-family: "Megrim", cursive;
+  font-weight: bold;
 }
 
 form {
