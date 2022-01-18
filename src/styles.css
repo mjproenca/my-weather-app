@@ -59,13 +59,16 @@ ul {
 
 .WeatherForecast {
   text-align: center;
+
+  color: grey;
+}
+
+.forecast-temperature-max {
+  color: #1ab3a9;
+  font-weight: bold;
 }
 
 #smallIcons {
-  text-align: center;
-}
-
-#smallTemp {
   text-align: center;
 }
 

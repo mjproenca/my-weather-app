@@ -74,15 +74,16 @@
         </div>
 
         <!-- temperatura grande -->
-        <div class="row g-3">
-          <div class="col-md-6" id="largeDetails">
+        <div class="row">
+          <div class="col-6" id="largeDetails">
             <span id="largeTemperature" class="float-left">23</span>
             <span class="units"
               ><a id="celsiusLink" href="">ºC</a> /
               <a id="farenheitLink" href="">ºF</a></span
             >
             <!-- Icone grande -->
-            <div style="float: right" id="largeIcon" class="col-md-6">
+
+            <div style="float: right" id="largeIcon" class="col-6">
               <img src="images/sunny-icon-256.png" alt="" />
             </div>
           </div>
@@ -94,7 +95,9 @@
           <div class="col">
             <div class="WeatherForecastPreview">
               <div class="forecast-time">Tue</div>
-              <canvas width="38" height="38"></canvas>
+              <div class="small-icon">
+                <img src="images/windy.png" alt="" />
+              </div>
               <div class="forecast-temperature">
                 <span class="forecast-temperature-max">1°</span
                 ><span class="forecast-temperature-min">-1°</span>
@@ -144,23 +147,6 @@
         </div>
 
         <!-- forecast Icones pequenos -->
-        <div class="row" id="smallIcons">
-          <div class="col-2">
-            <img src="images/windy.png" alt="windy icon" />
-          </div>
-          <div class="col-2">
-            <img src="images/sunny.png" alt="sunny icon" />
-          </div>
-          <div class="col-2">
-            <img src="images/thunder.png" alt="thunder icon" />
-          </div>
-          <div class="col-2">
-            <img src="images/rain.png" alt="rain icon" />
-          </div>
-          <div class="col-2">
-            <img src="images/partly-cloudy.png" alt="partly cloudy icon" />
-          </div>
-        </div>
       </div>
       <div id="footnoteLink">
         <a href="https://github.com/mjproenca/my-weather-app" target="blank"
