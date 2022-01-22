@@ -31,7 +31,12 @@ function displayWeatherConditions(response) {
     response.data.main.temp
   );
   document.querySelector("#conditions").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+
+    let icons = [
+      "images/"
+    ]
+    document.querySelector("#largeIcon").setAttribute("src") = ""
 }
 
 function searchCity(city) {

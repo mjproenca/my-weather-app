@@ -40,9 +40,13 @@ ul {
   margin-top: 50px;
 }
 
+.localTimeConditions {
+  color: grey;
+}
+
 #largeDetails {
   position: relative;
-  top: 50px;
+  top: 30px;
   left: 30px;
 }
 
@@ -50,14 +54,17 @@ ul {
   color: #1ab3a9;
   font-size: 35px;
 }
+
 #largeTemperature {
+  position: absolute;
   font-size: 100px;
   color: grey;
 }
 
 #largeDetails .units {
   position: relative;
-  top: -54px;
+  top: 35px;
+  left: 110px;
 }
 
 #largeIcon {
