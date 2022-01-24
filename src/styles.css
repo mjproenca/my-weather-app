@@ -66,29 +66,27 @@ ul {
   line-height: 1;
 }
 
-/* #largeDetails {
-  position: relative;
-  top: 30px;
-  left: 30px;
-  margin-bottom: 30px;
-} */
-
-/* #largeIcon {
-  margin-bottom: 40px;
-  margin-left: -40px;
-  margin-top: -10px;
-} */
-
 .units {
   top: -35px;
   left: 110px;
 }
 
-/* #largeIcon {
-  position: relative;
-  left: 90px;
-  bottom: 100px;
-} */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  color: grey;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+li::first-letter {
+  text-transform: capitalize;
+}
 
 .WeatherForecast {
   text-align: center;
