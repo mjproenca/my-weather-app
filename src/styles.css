@@ -49,6 +49,7 @@ ul {
   position: relative;
   top: 30px;
   left: 30px;
+  margin-bottom: 30px;
 }
 
 #cityGroup {
@@ -56,22 +57,23 @@ ul {
   font-size: 35px;
 }
 
-#largeTemperature {
-  position: absolute;
-  font-size: 100px;
-  color: grey;
-}
-
-#largeDetails .units {
-  position: relative;
-  top: 35px;
-  left: 110px;
-}
-
 #largeIcon {
   margin-bottom: 40px;
   margin-left: -40px;
   margin-top: -10px;
+}
+
+#largeTemperature {
+  position: absolute;
+  font-size: 100px;
+  color: grey;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: 12px;
+  left: 110px;
 }
 
 /* #largeIcon {
