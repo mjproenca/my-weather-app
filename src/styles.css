@@ -36,6 +36,7 @@ ul {
   background-color: transparent;
   color: grey;
 }
+
 #weatherDetails {
   margin-top: 50px;
 }
@@ -68,10 +69,16 @@ ul {
 }
 
 #largeIcon {
+  margin-bottom: 40px;
+  margin-left: -40px;
+  margin-top: -10px;
+}
+
+/* #largeIcon {
   position: relative;
   left: 90px;
   bottom: 100px;
-}
+} */
 
 .WeatherForecast {
   text-align: center;
