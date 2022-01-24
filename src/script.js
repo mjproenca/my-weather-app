@@ -41,6 +41,12 @@ function displayWeatherConditions(response) {
   );
 
   celsiusTemperature = response.data.main.temp;
+
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function searchCity(city) {
