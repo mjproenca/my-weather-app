@@ -78,19 +78,18 @@
 
           <div class="row">
             <div class="col-6">
-              <div class="clearfix" id="largeDetails">
-                <div style="float: left" id="largeIcon">
-                  <img src="images/sunny-128.png" alt="" />
-                </div>
-
-                <span id="largeTemperature" class="float-right"></span>
-                <span class="units"
+              <div class="clearfix largeDetails">
+                <img src="" alt="" id="largeIcon" class="float-left" />
+                <!-- <div class="float-left"> -->
+                  <span id="largeTemperature" ></span>
+                  <span class="units"
                   ><a id="celsiusLink" href="">ºC</a> /
-                  <a id="farenheitLink" href="">ºF</a></span
-                >
+                  <a id="farenheitLink" href="">ºF</a></span>
+                <!-- </div> -->
+                </div>
               </div>
             </div>
-          </div>
+          
 
           <!-- teste forecast -->
 
@@ -149,11 +148,13 @@
             </div>
           </div>
         </div>
+        
         <div id="footnoteLink">
           <a href="https://github.com/mjproenca/my-weather-app" target="blank"
             >Open-source code</a
           >
           by Maria João Proença
+        </div>
         </div>
       </div>
     </div>

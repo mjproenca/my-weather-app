@@ -33,10 +33,12 @@ function displayWeatherConditions(response) {
   document.querySelector("#conditions").innerHTML =
     response.data.weather[0].description;
 
-    let icons = [
-      "images/"
-    ]
-    document.querySelector("#largeIcon").setAttribute("src") = ""
+  let iconElement = document.querySelector("#largeIcon");
+
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
