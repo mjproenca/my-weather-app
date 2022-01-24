@@ -113,3 +113,9 @@ ul {
   font-size: small;
   margin-top: 10px;
 }
+
+.largeDetails .active {
+  color: grey;
+  cursor: default;
+  text-decoration: none;
+}
