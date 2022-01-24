@@ -86,6 +86,7 @@ changeCelsius.addEventListener("click", changeToCelsius);
 function changeToFarenheit(event) {
   event.preventDefault();
   let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  changeCelsius.classList.remove("active");
   let largeTemperature = document.querySelector("#largeTemperature");
   largeTemperature.innerHTML = Math.round(farenheitTemperature);
 }
