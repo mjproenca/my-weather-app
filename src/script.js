@@ -23,6 +23,36 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+//Display Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function name(day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="WeatherForecastPreview">
+                  <div class="forecast-time">${day}</div>
+                  <div class="small-icon">
+                    <img src="images/windy.png" alt="" width="42" />
+                  </div>
+                  <div class="forecast-temperature">
+                    <span class="forecast-temperature-max">1°</span
+                    ><span class="forecast-temperature-min">-1°</span>
+                  </div>
+                </div>
+              
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Display Weather Conditions
 
 function displayWeatherConditions(response) {
@@ -118,3 +148,4 @@ form.addEventListener("submit", showCity);
 let currentLocationButton = document.querySelector("#currentPositionBtn");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("Ericeira");
+displayForecast();
