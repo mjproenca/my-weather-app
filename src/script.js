@@ -94,8 +94,6 @@ function displayWeatherConditions(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-  celsiusTemperature = response.data.main.temp;
-
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
 
@@ -134,32 +132,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
 
-//Change to Celsius/Farenheit
-
-function changeToCelsius(event) {
-  event.preventDefault();
-  let largeTemperature = document.querySelector("#largeTemperature");
-  changeCelsius.classList.add("active");
-  changeFarenheit.classList.remove("active");
-  largeTemperature.innerHTML = Math.round(celsiusTemperature);
-}
-
-let changeCelsius = document.querySelector("#celsiusLink");
-changeCelsius.addEventListener("click", changeToCelsius);
-
-function changeToFarenheit(event) {
-  event.preventDefault();
-  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  changeCelsius.classList.remove("active");
-  changeFarenheit.classList.add("active");
-  let largeTemperature = document.querySelector("#largeTemperature");
-  largeTemperature.innerHTML = Math.round(farenheitTemperature);
-}
-
-let changeFarenheit = document.querySelector("#farenheitLink");
-changeFarenheit.addEventListener("click", changeToFarenheit);
-
-let celsiusTemperature = null;
 //button actions
 
 //
