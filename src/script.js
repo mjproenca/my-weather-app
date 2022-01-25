@@ -25,24 +25,25 @@ function formatDate(date) {
 
 //Display Forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Fri"];
-  days.forEach(function name(day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
-              <div class="col-2">
+              <div class="col">
                 <div class="WeatherForecastPreview">
-                  <div class="forecast-time">${day}</div>
+                  <div class="forecast-time">${forecastDay.dt}</div>
                   <div class="small-icon">
-                    <img src="images/windy.png" alt="" width="42" />
+                    <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="42" />
                   </div>
                   <div class="forecast-temperature">
-                    <span class="forecast-temperature-max">1°</span
-                    ><span class="forecast-temperature-min">-1°</span>
+                    <span class="forecast-temperature-max">${forecastDay.temp.max}°</span
+                    ><span class="forecast-temperature-min">${forecastDay.temp.min}°</span>
                   </div>
                 </div>
               
@@ -51,6 +52,12 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "4e31fad687a03973ab3fc49fdc685069";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //Display Weather Conditions
@@ -77,6 +84,8 @@ function displayWeatherConditions(response) {
 
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -148,4 +157,3 @@ form.addEventListener("submit", showCity);
 let currentLocationButton = document.querySelector("#currentPositionBtn");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("Ericeira");
-displayForecast();
