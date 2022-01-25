@@ -90,8 +90,8 @@ li::first-letter {
 
 .WeatherForecast {
   text-align: center;
-
   color: grey;
+  font-size: 15px;
 }
 
 .forecast-temperature-max {
